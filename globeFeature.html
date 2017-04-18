@@ -213,6 +213,15 @@
 //    m0 = m1;
 
             svg.selectAll("path").attr("d", path);
+            svg.selectAll("text")
+                .attr("x", function(d){
+                    return path.centroid(d)[0];
+                })
+                .attr("y", function(d){
+                    return  path.centroid(d)[1];
+                })
+                .attr("text-anchor","middle")
+                .attr('font-size','6pt');
         }
     }
 
