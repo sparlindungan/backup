@@ -6,6 +6,7 @@
     <link type="text/css" rel="stylesheet" href="style/pace.css" />
     <link type="text/less" rel="stylesheet" href="style/app.less" />
     <link type="text/css" rel="stylesheet" href="lib/semantic/css/semantic.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="style/visStyle.css" />
     <script type="text/javascript" src="lib/pace.js"></script>
     <script type="text/javascript" src="lib/less.js"></script>
@@ -15,6 +16,7 @@
     <script type="text/javascript" src="lib/semantic/javascript/semantic.min.js"></script>
     <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
     <script type="text/javascript" src="node_modules/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="node_modules/select2/dist/js/select2.js"></script>
 </head>
 <body style="margin:0px"><!-- 
     <a href="https://github.com/pissang/dota2hero" style="">
@@ -25,6 +27,15 @@
             <canvas id="ViewPort"></canvas>
         </div>
         <div id="InfoOverlay">
+            <select id="js-example-basic-single">
+              <option value="gold_per_min">GPM</option>
+              <option value="hero_damage_per_min">Hero Damage per Min</option>
+              <option value="kills_per_min">KPM</option>
+              <option value="hero_healing_per_min">Hero Healing per Min</option>
+              <option value="last_hits_per_min">CS per Min</option>
+              <option value="tower_damage">Tower Damage</option>
+              <option value="xp_per_min">XPM</option>
+            </select>
             <svg id="heroGraph" width="800" height="250"></svg>
         </div>
         <div ng-view></div>

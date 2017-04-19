@@ -1,8 +1,32 @@
 #InfoOverlay {
 	position: absolute;
     bottom: 0px;
-    background: rgba(211, 211, 211, .5);
+    background: rgba(0, 0, 0, .8);
     width: 800px;
     margin-left: -400px;
     left: 50%;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.axisWhite line{
+  stroke: white;
+}
+
+.axisWhite path{
+  stroke: white;
+}
+
+.axisWhite text{
+  fill: white;
+}  
+
+.select2-container {
+    left: 80%;
+    top: 65%;
+    position: absolute;
 }

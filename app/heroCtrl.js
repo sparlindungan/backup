@@ -6,6 +6,8 @@
 
     var app = angular.module("heroViewer");
 
+    $("#js-example-basic-single").select2();
+
     // Create camera
     var camera = new qtek.camera.Perspective({
         aspect : window.innerWidth / window.innerHeight,
@@ -276,8 +278,8 @@
                 // http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html
                 $scope.$digest();
 
-                //InfoVis
-            var heroStats;
+            //InfoVis
+            var heroStats; //get the stats for a specific hero
             $.ajax({
                 url: 'https://api.opendota.com/api/heroStats',
                 async: false,
@@ -287,11 +289,13 @@
                 }
             });
 
+            //show the hero graph in case it is hidden from the hero list view
             $('#heroGraph').show();
 
+            //find the hero stats for the specific hero we want to show
             var thisHeroStats = _.find(heroStats, {'localized_name': $scope.overview.title});
-            console.log(thisHeroStats);
 
+            //get the benchmarks for the hero that is currently being showed
             var heroBenchmarks;
             $.ajax({
               url: "https://api.opendota.com/api/benchmarks",
@@ -301,13 +305,14 @@
               },
               async: false,
               success: function(response) {
-                console.log(response);
                 heroBenchmarks = response;
               },
               error: function(xhr) {
                 //Do Something to handle error
               }
             });
+
+
 
             var data = heroBenchmarks.result.gold_per_min;
             var svg = d3.select("#heroGraph"),
@@ -325,29 +330,33 @@
                 .x(function(d) { return x(d.percentile); })
                 .y(function(d) { return y(d.value); });
 
-            x.domain(d3.extent(data, function(d) { return d.percentile; }));
-            y.domain(d3.extent(data, function(d) { return d.value; }));
+            x.domain([.1, 1]);
+            y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
             g.append("g")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x))
-                .append('text')
-                .attr("fill", "#000")
+                .attr('class', 'x axis axisWhite')
+                .call(d3.axisBottom(x));
+
+            var xAxisText = g.append("text")
+                .attr("fill", "#fff")
                 .attr("dy", "0.71em")
                 .attr('x', width)
-                .attr('y', -10)
+                .attr('y', 180)
                 .attr("text-anchor", "end")
-                .text('Percentile')
+                .text('Percentile');
 
             g.append("g")
-                .call(d3.axisLeft(y))
-                .append("text")
-                .attr("fill", "#000")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 6)
-                .attr("dy", "0.71em")
-                .attr("text-anchor", "end")
-                .text("GPM");
+                .attr("class", "y axis axisWhite")
+                .call(d3.axisLeft(y));
+
+            var yAxisText = g.append("text")
+                .attr('fill', '#fff')
+                .attr('transform', 'rotate(-90)')
+                .attr('y', 6)
+                .attr('dy', '0.71em')
+                .attr('text-anchor', 'end')
+                .text('GPM');
 
             g.append("path")
                 .datum(data)
@@ -356,7 +365,35 @@
                 .attr("stroke-linejoin", "round")
                 .attr("stroke-linecap", "round")
                 .attr("stroke-width", 1.5)
+                .attr("class", "line")
                 .attr("d", line);
+
+            //update the vis upon select changing
+            $("#js-example-basic-single").on("change", function (e) {
+                console.log(heroBenchmarks); 
+                var visType = $("#js-example-basic-single").select2('data');
+                console.log(visType);
+                data = _.get(heroBenchmarks.result, visType[0].id);
+                y.domain([0, d3.max(data, function(d) { return d.value; })]);
+                var vis = d3.select("#heroGraph").transition();
+                vis.select(".line")   // change the line
+                    .duration(750)
+                    .attr("d", line(data));
+                vis.select(".x.axis") // change the x axis
+                    .duration(750)
+                    .call(d3.axisBottom(x))
+                vis.select(".y.axis") // change the y axis
+                    .duration(750)
+                    .call(d3.axisLeft(y));
+                yAxisText
+                    .transition()
+                    .duration(250)
+                    .style("opacity", 0)
+                    .transition().duration(500)
+                    .style("opacity", 1)
+                    .text(visType[0].text);
+            });
+
             });
          });
     });
