@@ -26,6 +26,8 @@
             title : ""
         }
 
+        $('#heroGraph').hide().empty();
+
         $scope.showHeroName = function(hero) {
             $scope.hoverHero.title = hero.title;
         }

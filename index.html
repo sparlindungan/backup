@@ -6,12 +6,15 @@
     <link type="text/css" rel="stylesheet" href="style/pace.css" />
     <link type="text/less" rel="stylesheet" href="style/app.less" />
     <link type="text/css" rel="stylesheet" href="lib/semantic/css/semantic.min.css" />
+    <link type="text/css" rel="stylesheet" href="style/visStyle.css" />
     <script type="text/javascript" src="lib/pace.js"></script>
     <script type="text/javascript" src="lib/less.js"></script>
     <script type="text/javascript" src="lib/qtek.js"></script>
     <script type="text/javascript" src="lib/angular.js"></script>
     <script type="text/javascript" src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/semantic/javascript/semantic.min.js"></script>
+    <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
+    <script type="text/javascript" src="node_modules/lodash/lodash.min.js"></script>
 </head>
 <body style="margin:0px"><!-- 
     <a href="https://github.com/pissang/dota2hero" style="">
@@ -20,6 +23,9 @@
     <div id="App">
         <div id="HeroViewer">
             <canvas id="ViewPort"></canvas>
+        </div>
+        <div id="InfoOverlay">
+            <svg id="heroGraph" width="800" height="250"></svg>
         </div>
         <div ng-view></div>
     </div>

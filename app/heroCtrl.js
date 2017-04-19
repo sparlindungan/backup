@@ -78,6 +78,7 @@
         renderer, getResourcePath, cache, animation, background, config
     ) {
         var heroName = $routeParams.name;
+        var heroTitle;
         if (!cache.has('overview')) {
             $http.get(getResourcePath('heroes/overview_en.json'))
                 .success(function(data) {
@@ -274,6 +275,88 @@
                 // http://stackoverflow.com/questions/17039998/angular-not-making-http-requests-immediately
                 // http://www.benlesh.com/2013/08/angularjs-watch-digest-and-apply-oh-my.html
                 $scope.$digest();
+
+                //InfoVis
+            var heroStats;
+            $.ajax({
+                url: 'https://api.opendota.com/api/heroStats',
+                async: false,
+                dataType: 'json',
+                success: function(response) {
+                    heroStats = response;
+                }
+            });
+
+            $('#heroGraph').show();
+
+            var thisHeroStats = _.find(heroStats, {'localized_name': $scope.overview.title});
+            console.log(thisHeroStats);
+
+            var heroBenchmarks;
+            $.ajax({
+              url: "https://api.opendota.com/api/benchmarks",
+              type: "get", //send it through get method
+              data: { 
+                hero_id: thisHeroStats.id
+              },
+              async: false,
+              success: function(response) {
+                console.log(response);
+                heroBenchmarks = response;
+              },
+              error: function(xhr) {
+                //Do Something to handle error
+              }
+            });
+
+            var data = heroBenchmarks.result.gold_per_min;
+            var svg = d3.select("#heroGraph"),
+            margin = {top: 20, right: 20, bottom: 30, left: 50},
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = +svg.attr("height") - margin.top - margin.bottom,
+            
+            g = svg.append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            var x = d3.scaleLinear().range([0, width]);
+            var y = d3.scaleLinear().range([height, 0]);
+
+            var line = d3.line()
+                .x(function(d) { return x(d.percentile); })
+                .y(function(d) { return y(d.value); });
+
+            x.domain(d3.extent(data, function(d) { return d.percentile; }));
+            y.domain(d3.extent(data, function(d) { return d.value; }));
+
+            g.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .append('text')
+                .attr("fill", "#000")
+                .attr("dy", "0.71em")
+                .attr('x', width)
+                .attr('y', -10)
+                .attr("text-anchor", "end")
+                .text('Percentile')
+
+            g.append("g")
+                .call(d3.axisLeft(y))
+                .append("text")
+                .attr("fill", "#000")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "0.71em")
+                .attr("text-anchor", "end")
+                .text("GPM");
+
+            g.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-linejoin", "round")
+                .attr("stroke-linecap", "round")
+                .attr("stroke-width", 1.5)
+                .attr("d", line);
             });
          });
     });
