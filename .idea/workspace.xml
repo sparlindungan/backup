@@ -29,20 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globeFeature.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="globeFeature.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/globeFeature.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="world-countries.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="world-countries.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/world-countries.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-17250">
               <caret line="2" column="1070" lean-forward="false" selection-start-line="2" selection-start-column="1070" selection-end-line="2" selection-end-column="1070" />
               <folding />
             </state>
@@ -611,12 +611,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492535355266</updated>
       <workItem from="1492535358475" duration="6544000" />
-      <workItem from="1492616780506" duration="1802000" />
+      <workItem from="1492616780506" duration="2193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8346000" />
+    <option name="totallyTimeSpent" value="8737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -717,18 +717,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/world-countries.json">
+    <entry file="file://$PROJECT_DIR$/globeFeature.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1070" lean-forward="false" selection-start-line="2" selection-start-column="1070" selection-end-line="2" selection-end-column="1070" />
+        <state relative-caret-position="209">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/globeFeature.html">
+    <entry file="file://$PROJECT_DIR$/world-countries.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        <state relative-caret-position="-17250">
+          <caret line="2" column="1070" lean-forward="false" selection-start-line="2" selection-start-column="1070" selection-end-line="2" selection-end-column="1070" />
           <folding />
         </state>
       </provider>

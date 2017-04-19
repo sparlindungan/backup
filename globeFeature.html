@@ -40,15 +40,7 @@
     var path = d3.geo.path()
         .projection(projection);
 
-//    queue()
-//        .defer(d3.json, 'mmr.json')
-//        .defer(d3.json, 'world-countries.json')
-//        .await(makeMyMap);
-
-
-//    function makeMyMap(error, world_countries, mmr)
-//    {
-        d3.json("world-countries.json", function (collection) {
+    d3.json("world-countries.json", function (collection) {
             svg.selectAll("path")
                 .data(collection.features)
                 .enter().append("svg:path")
@@ -73,7 +65,6 @@
                 .attr("text-anchor", "middle")
                 .attr('font-size', '6pt');
         });
-//    }
 
 
     function trackballAngles(pt) {
