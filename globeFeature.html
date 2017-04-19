@@ -61,8 +61,9 @@
                 .enter()
                 .append("svg:text")
                 .text(function (d) {
-                    return "test";
+                    return d.properties.name + ", MMR: " + d.properties.avg_mmr;
                 })
+
                 .attr("x", function (d) {
                     return path.centroid(d)[0];
                 })
