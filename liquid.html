@@ -12,12 +12,19 @@
     </style>
 </head>
 <body>
-<svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>
-<svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
-<svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
-<svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>
-<svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>
-<svg id="fillgauge6" width="19%" height="200" onclick="gauge6.update(NewValue());"></svg>
+<!--<svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>-->
+<!--<svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>-->
+<!--<svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>-->
+<!--<svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>-->
+<!--<svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>-->
+<!--<svg id="fillgauge6" width="19%" height="200" onclick="gauge6.update(NewValue());"></svg>-->
+
+<svg id="fillgauge1" width="97%" height="250"></svg>
+<svg id="fillgauge2" width="19%" height="200"></svg>
+<svg id="fillgauge3" width="19%" height="200"></svg>
+<svg id="fillgauge4" width="19%" height="200"></svg>
+<svg id="fillgauge5" width="19%" height="200"></svg>
+<svg id="fillgauge6" width="19%" height="200"></svg>
 <script language="JavaScript">
     var gauge1 = loadLiquidFillGauge("fillgauge1", 55);
     var config1 = liquidFillGaugeDefaultSettings();
@@ -28,6 +35,7 @@
     config1.circleThickness = 0.2;
     config1.textVertPosition = 0.2;
     config1.waveAnimateTime = 1000;
+
     var gauge2= loadLiquidFillGauge("fillgauge2", 28, config1);
     var config2 = liquidFillGaugeDefaultSettings();
     config2.circleColor = "#D4AB6A";
@@ -40,6 +48,7 @@
     config2.waveAnimateTime = 2000;
     config2.waveHeight = 0.3;
     config2.waveCount = 1;
+
     var gauge3 = loadLiquidFillGauge("fillgauge3", 60.1, config2);
     var config3 = liquidFillGaugeDefaultSettings();
     config3.textVertPosition = 0.8;
@@ -49,6 +58,7 @@
     config3.waveOffset = 0.25;
     config3.valueCountUp = false;
     config3.displayPercent = false;
+
     var gauge4 = loadLiquidFillGauge("fillgauge4", 50, config3);
     var config4 = liquidFillGaugeDefaultSettings();
     config4.circleThickness = 0.15;
@@ -65,7 +75,8 @@
     config4.waveOffset = 0.25;
     config4.textSize = 0.75;
     config4.waveCount = 3;
-    var gauge5 = loadLiquidFillGauge("fillgauge5", 60.44, config4);
+
+    var gauge5 = loadLiquidFillGauge("fillgauge5", 12, config4);
     var config5 = liquidFillGaugeDefaultSettings();
     config5.circleThickness = 0.4;
     config5.circleColor = "#6DA398";
@@ -82,6 +93,7 @@
     config5.minValue = 30;
     config5.maxValue = 150
     config5.displayPercent = false;
+
     var gauge6 = loadLiquidFillGauge("fillgauge6", 120, config5);
 
     function NewValue(){
