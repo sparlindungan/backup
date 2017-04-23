@@ -9,14 +9,25 @@
         text-align: center;
     }
 
+    .tooltip {
+        width: 200px;
+        height: 28px;
+        pointer-events: none;
+    }
+
 </style>
 <body>
-<div .title>D3 Trackball</div>
+<div .title>Dota2 Global MMR</div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script>
 
+
     var radius = 250;
+
+    var tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
 
     var projection = d3.geo.orthographic()
         .scale(radius)
@@ -25,7 +36,7 @@
 
     var svg = d3.select("body").append("svg")
         .attr("width", radius * 2)
-        .attr("height", radius * 2)
+        .attr("height", radius * 2 + 100)
         .on("mousedown", mousedown)
         .on("mousemove", mousemove)
         .on("mouseup", mouseup);
@@ -35,36 +46,108 @@
         .attr("cy", radius)
         .attr("r", radius)
         .style("fill", "steelblue")
-        .style("stroke", "black");
+        .style("stroke", "white");
+
+    var mapLegend = d3.select("body").append("svg")
+        .attr("width", radius * 2)
+        .attr("height", 100);
+
+    var defs = svg.append("defs");
+
+    var linearGradient = defs.append("linearGradient")
+        .attr("id", "linear-gradient");
+
+    linearGradient
+        .attr("x1", "0%")
+        .attr("y1", "0%")
+        .attr("x2", "100%")
+        .attr("y2", "0%");
+
+    linearGradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "lightgreen");
+
+
+    linearGradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "darkgreen");
+
+    svg.append("rect")
+        .attr("width", 500)
+        .attr("height", 25)
+        .attr("y",500 + 25)
+        .style("fill", "url(#linear-gradient)");
+
+    svg.append("text")
+        .attr("class","legendText")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "14px")
+        .attr("x", 500/2)
+        .attr("y",500 + 15)
+        .text("Countries Average MMR");
+
+    svg.append("text")
+        .attr("class","legendText")
+        .attr("text-anchor", "start")
+        .attr("font-size", "14px")
+        .attr("x", 0)
+        .attr("y",500 + 65)
+        .text("2584");
+
+    svg.append("text")
+        .attr("class","legendText")
+        .attr("text-anchor", "end")
+        .attr("font-size", "14px")
+        .attr("x", 500)
+        .attr("y",500 + 65)
+        .text("3436");
 
     var path = d3.geo.path()
         .projection(projection);
 
+
+    color = d3.scale.linear().domain([2584,3436])
+        .interpolate(d3.interpolateHcl)
+        .range(['lightgreen', 'darkgreen']);
+
+
     d3.json("world-countries.json", function (collection) {
-            svg.selectAll("path")
-                .data(collection.features)
-                .enter().append("svg:path")
-                .attr("d", path)
-                .attr("fill", "grey")
-                .attr("stroke", "black");
+        svg.selectAll("path")
+            .data(collection.features)
+            .enter().append("svg:path")
+            .attr("d", path)
+            .attr("fill", function(d) {
+                if(d.properties.avg_mmr == 0) {
+                    return 'white';
+                } else {
+                    return color(d.properties.avg_mmr);
+                }
 
-            svg.selectAll("text")
-                .data(collection.features)
-                .enter()
-                .append("svg:text")
-                .text(function (d) {
-                    return d.properties.name + ", MMR: " + d.properties.avg_mmr;
-                })
+            })
+            .attr("stroke", "white")
+            .on("mouseover", function(d) {
+                showCountryContents(d);
+            })
+            .on("mouseout", function(d) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            });
 
-                .attr("x", function (d) {
-                    return path.centroid(d)[0];
-                })
-                .attr("y", function (d) {
-                    return path.centroid(d)[1];
-                })
-                .attr("text-anchor", "middle")
-                .attr('font-size', '6pt');
-        });
+
+    });
+
+    function showCountryContents(d) {
+        console.log("TESTING");
+        tooltip.transition()
+            .duration(200)
+            .style("opacity", 1)
+            .style("font-size", "12px")
+        tooltip.html(d.properties.name + "<br/> Average MMR: " + d.properties.avg_mmr
+            + "<br/> Number of Players: " + d.properties.count_player)
+            .style("left", (d3.event.pageX + 10) + "px")
+            .style("top", (d3.event.pageY - 40) + "px");
+    }
 
 
     function trackballAngles(pt) {
@@ -214,15 +297,7 @@
 //    m0 = m1;
 
             svg.selectAll("path").attr("d", path);
-            svg.selectAll("text")
-                .attr("x", function(d){
-                    return path.centroid(d)[0];
-                })
-                .attr("y", function(d){
-                    return  path.centroid(d)[1];
-                })
-                .attr("text-anchor","middle")
-                .attr('font-size','6pt');
+
         }
     }
 
