@@ -1,7 +1,4 @@
 /**
- * Created by schmidt on 4/23/17.
- */
-/**
  * Created by schmidt on 4/21/17.
  */
 function liquidFillGaugeDefaultSettings(){
