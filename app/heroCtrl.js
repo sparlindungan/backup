@@ -279,23 +279,33 @@
                 $scope.$digest();
 
             //InfoVis
-            var heroStats; //get the stats for a specific hero
-            $.ajax({
-                url: 'https://api.opendota.com/api/heroStats',
-                async: false,
-                dataType: 'json',
-                success: function(response) {
-                    heroStats = response;
-                }
-            });
 
-            //show the hero graph in case it is hidden from the hero list view
-            $('#heroGraph').show();
 
-            //find the hero stats for the specific hero we want to show
-            var thisHeroStats = _.find(heroStats, {'localized_name': $scope.overview.title});
+                var heroStats; //get the stats for a specific hero
+                $.ajax({
+                    url: 'https://api.opendota.com/api/heroStats',
+                    async: false,
+                    dataType: 'json',
+                    success: function(response) {
+                        heroStats = response;
+                    },
 
-            //get the benchmarks for the hero that is currently being showed
+
+                });
+
+                //show the hero graph in case it is hidden from the hero list view
+                $('#heroGraph').show();
+
+                //find the hero stats for the specific hero we want to show
+                var thisHeroStats = _.find(heroStats, {'localized_name': $scope.overview.title});
+
+
+
+
+
+
+
+                //get the benchmarks for the hero that is currently being showed
             var heroBenchmarks;
             $.ajax({
               url: "https://api.opendota.com/api/benchmarks",
@@ -314,12 +324,13 @@
 
 
 
+
             var data = heroBenchmarks.result.gold_per_min;
             var svg = d3.select("#heroGraph"),
             margin = {top: 20, right: 20, bottom: 30, left: 50},
             width = +svg.attr("width") - margin.left - margin.right,
             height = +svg.attr("height") - margin.top - margin.bottom,
-            
+
             g = svg.append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -394,7 +405,66 @@
                     .text(visType[0].text);
             });
 
+
+
+
             });
          });
     });
-})();
+
+
+
+}
+)();
+
+//TODO: Sandro's function
+
+// function sleepyMe() {
+//     var heroStats1; //get the stats for a specific hero
+//     $.ajax({
+//         url: 'https://api.opendota.com/api/heroStats',
+//         async: false,
+//         dataType: 'json',
+//         success: function(response) {
+//             heroStats1 = response;
+//         },
+//
+//
+//     });
+//     //
+//     // //show the hero graph in case it is hidden from the hero list view
+//     // $('#heroGraph').show();
+//
+//     //find the hero stats for the specific hero we want to show
+//     var thisHeroStats = _.find(heroStats1, {'localized_name': $scope.overview.title});
+//
+//
+//     var a_w = thisHeroStats["1000_win"];
+//     var a_p = thisHeroStats["1000_pick"];
+//     var b_w = thisHeroStats["2000_win"];
+//     var b_p = thisHeroStats["2000_pick"];
+//     var c_w = thisHeroStats["3000_win"];
+//     var c_p = thisHeroStats["3000_pick"];
+//     var f_w = thisHeroStats["4000_win"];
+//     var f_p = thisHeroStats["4000_pick"];
+//     var e_w = thisHeroStats["5000_win"];
+//     var e_p = thisHeroStats["5000_pick"];
+//
+//
+//     function WinRate(win, pick){
+//         return (win/pick) * 100;
+//     }
+//
+//     return {a: WinRate(a_w,a_p),
+//         b: WinRate(b_w,b_p),
+//         c: WinRate(c_w,c_p),
+//         f: WinRate(f_w,f_p),
+//         e: WinRate(e_w,e_p)};
+// }
+
+
+
+
+
+
+

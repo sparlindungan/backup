@@ -27,11 +27,6 @@
 <svg id="fillgauge6" width="19%" height="200"></svg>
 <script language="JavaScript">
 
-    //var gauge1 = loadLiquidFillGauge("fillgauge1", 55);
-
-
-
-
 
     var config2 = liquidFillGaugeDefaultSettings();
     config2.circleColor = "#FF7777";
@@ -43,7 +38,7 @@
     config2.waveAnimateTime = 1000;
     config2.waveHeight = 0.1;
     config2.waveCount = 1;
-    var gauge2 = loadLiquidFillGauge("fillgauge2", 90.8, config2);
+    var gauge2 = loadLiquidFillGauge("fillgauge2", 19, config2);
     //winrate for mmr >= 1000 & < 2000
 
 
@@ -56,7 +51,7 @@
     config3.waveAnimateTime = 1000;
     config3.waveHeight = 0.1;
     config3.waveCount = 1;
-    var gauge3 = loadLiquidFillGauge("fillgauge3", 40.6, config3);
+    var gauge3 = loadLiquidFillGauge("fillgauge3", 21, config3);
     //winrate for mmr >= 2000 & < 3000
 
     var config4 = liquidFillGaugeDefaultSettings();
@@ -68,7 +63,7 @@
     config4.waveAnimateTime = 1000;
     config4.waveHeight = 0.1;
     config4.waveCount = 1;
-    var gauge4 = loadLiquidFillGauge("fillgauge4", 40.6, config4);
+    var gauge4 = loadLiquidFillGauge("fillgauge4", 34, config4);
     //winrate for mmr >= 3000 & < 4000
 
 
@@ -82,7 +77,7 @@
     config5.waveAnimateTime = 1000;
     config5.waveHeight = 0.1;
     config5.waveCount = 1;
-    var gauge5 = loadLiquidFillGauge("fillgauge5", 25.8, config5);
+    var gauge5 = loadLiquidFillGauge("fillgauge5", 45, config5);
     //winrate for mmr >= 4000 & < 5000
 
     var config6 = liquidFillGaugeDefaultSettings();
@@ -94,12 +89,15 @@
     config6.waveAnimateTime = 1000;
     config6.waveHeight = 0.1;
     config6.waveCount = 1;
-    var gauge6 = loadLiquidFillGauge("fillgauge6", 40.6, config6);
+    var gauge6 = loadLiquidFillGauge("fillgauge6", 57, config6);
     //winrate for mmr >= 5000
 
-    function WinRate(pick, win){
-        return (win/pick) * 100;
-    }
+    //TODO: Sandro's function
+//    var result = sleepyMe();
+//    function lookMmr(mmr) {
+//        return result[mmr];
+//    }
+
 
 </script>
 <script>(function(){
@@ -113,5 +111,8 @@ e?(c?b.tick(a,c,e):b.tick(a,"",e),!0):!1};window.mobilespeed_jstiming.getNavTimi
     a.fetchStart,g);u(b,"nsrs_",a.redirectStart,g);u(b,"nsre_",a.redirectEnd,g);u(b,"nsds_",a.domainLookupStart,g);u(b,"nscs_",a.connectStart,g);u(b,"nsrqs_",a.requestStart,g);var e=!1;try{e=window.external&&window.external.startE}catch(c){}!e&&window.chrome&&window.chrome.csi&&(e=Math.floor(window.chrome.csi().startE));e&&(u(b,"_se",e),u(b,"sens_",a.navigationStart,"_se"));u(b,"ntplt0_",a.loadEventStart,g);u(b,"ntplt1_",a.loadEventEnd,g);window.chrome&&window.chrome.loadTimes&&(a=window.chrome.loadTimes().firstPaintTime)&&
 u(b,"nsfp_",1E3*a,g)}}}};}).call(this);
 </script><script>(function(){var a=window.mobilespeed_jstiming,b=a.load;window.top==window&&window.addEventListener("load",function(){b.name="load";b.tick("ol");a.getNavTiming(b);setTimeout(function(){a.report(b,{e:"default_policy"})},300)},!1);}).call(this);
-</script></body>
+</script>
+
+<script type="text/javascript" src="app/heroCtrl.js"></script>
+</body>
 </html>

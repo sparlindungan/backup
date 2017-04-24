@@ -17,6 +17,7 @@
     <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
     <script type="text/javascript" src="node_modules/lodash/lodash.min.js"></script>
     <script type="text/javascript" src="node_modules/select2/dist/js/select2.js"></script>
+
 </head>
 <body style="margin:0px"><!-- 
     <a href="https://github.com/pissang/dota2hero" style="">
@@ -27,6 +28,7 @@
             <canvas id="ViewPort"></canvas>
         </div>
         <div id="InfoOverlay">
+
             <select id="js-example-basic-single">
               <option value="gold_per_min">GPM</option>
               <option value="hero_damage_per_min">Hero Damage per Min</option>
@@ -37,6 +39,7 @@
               <option value="xp_per_min">XPM</option>
             </select>
             <svg id="heroGraph" width="800" height="250"></svg>
+
         </div>
         <div ng-view></div>
     </div>
@@ -49,6 +52,11 @@
         </div>
         <a href="globeFeature.html">
         <div class="ui circular icon button blue" id="Globe">
+            <i class="icon globe"></i>
+        </div>
+        </a>
+        <a href="liquid.html">
+        <div class="ui circular icon button blue" id="MMR">
             <i class="icon globe"></i>
         </div>
         </a>

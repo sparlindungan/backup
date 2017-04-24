@@ -23,6 +23,10 @@ function liquidFillGaugeDefaultSettings(){
         ,textColor:"#045681"
         ,waveTextColor:"#A4DBf8"
     };}
+
+
+
+
 function loadLiquidFillGauge(elementId,value,config){
     if(config==null)
         config=liquidFillGaugeDefaultSettings();
