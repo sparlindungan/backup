@@ -323,7 +323,7 @@
             });
 
 
-            //hero role display
+          //  hero role display
             // var heroRoles = {};
             // $.ajax({
             //   url: 'https://api.opendota.com/api/heroStats',
@@ -369,26 +369,26 @@
             //   console.log(heroRoles);
             //
             //   //heroRoles['hero.localized_name'].reverse();
-            //   console.log(heroRoles['hero.localized_name']);
+            //   console.log(heroRoles[hero.localized_name]);
             //
             // var barOrder = {};
-            //   for (var i = 0; i <heroRoles['hero.localized_name'].length; i++) {
+            //   for (var i = 0; i <heroRoles[hero.localized_name].length; i++) {
             //
             //   }
             //
-            // var width = 420,
+            // var widthHeroRole = 420,
             //     barHeight = 20;
             //
             // var x = d3.scale.linear()
             //     .domain([0,420])
-            //     .range([0, width]);
+            //     .range([0, widthHeroRole]);
             //
             // var chart = d3.select(".chart")
-            //     .attr("width", width)
+            //     .attr("width", widthHeroRole)
             //     .attr("height", barHeight *6);
             //
             // var bar = chart.selectAll("g")
-            //     .data(heroRoles['hero.localized_name'])
+            //     .data(heroRoles[hero.localized_name])
             //   .enter().append("g")
             //     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
             //
@@ -419,26 +419,26 @@
             //         }
             //       })
             //     .attr("width",  function(d) {
-            //       if (heroRoles['hero.localized_name'].indexOf(d) == 0) {
-            //         return x(heroRoles['hero.localized_name'].length + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 1) {
-            //           return x(heroRoles['hero.localized_name'].length-1 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 2) {
-            //           return x(heroRoles['hero.localized_name'].length-2 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 3) {
-            //           return x(heroRoles['hero.localized_name'].length-3 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 4) {
-            //           return x(heroRoles['hero.localized_name'].length-4 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 5) {
-            //           return x(heroRoles['hero.localized_name'].length-5 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 6) {
-            //           return x(heroRoles['hero.localized_name'].length-6 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 7) {
-            //           return x(heroRoles['hero.localized_name'].length-7 + 10) *10;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 8) {
-            //           return x(heroRoles['hero.localized_name'].length-8 + 10) *10;
+            //       if (heroRoles[hero.localized_name].indexOf(d) == 0) {
+            //         return x(heroRoles[hero.localized_name].length + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 1) {
+            //           return x(heroRoles[hero.localized_name].length-1 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 2) {
+            //           return x(heroRoles[hero.localized_name].length-2 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 3) {
+            //           return x(heroRoles[hero.localized_name].length-3 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 4) {
+            //           return x(heroRoles[hero.localized_name].length-4 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 5) {
+            //           return x(heroRoles[hero.localized_name].length-5 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 6) {
+            //           return x(heroRoles[hero.localized_name].length-6 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 7) {
+            //           return x(heroRoles[hero.localized_name].length-7 + 10) *10;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 8) {
+            //           return x(heroRoles[hero.localized_name].length-8 + 10) *10;
             //       } else {
-            //           return x((heroRoles['hero.localized_name'].indexOf(d)) +10) *10;
+            //           return x((heroRoles[hero.localized_name].indexOf(d)) +10) *10;
             //       }
             //
             //     })
@@ -448,26 +448,26 @@
             //
             // bar.append("text")
             //     .attr("x", function(d) {
-            //       if (heroRoles['hero.localized_name'].indexOf(d) == 0) {
-            //         return x(heroRoles['hero.localized_name'].length + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 1) {
-            //           return x(heroRoles['hero.localized_name'].length-1 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 2) {
-            //           return x(heroRoles['hero.localized_name'].length-2 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 3) {
-            //           return x(heroRoles['hero.localized_name'].length-3 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 4) {
-            //           return x(heroRoles['hero.localized_name'].length-4 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 5) {
-            //           return x(heroRoles['hero.localized_name'].length-5 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 6) {
-            //           return x(heroRoles['hero.localized_name'].length-6 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 7) {
-            //           return x(heroRoles['hero.localized_name'].length-7 + 10) *10 -3;
-            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 8) {
-            //           return x(heroRoles['hero.localized_name'].length-8 + 10) *10 -3;
+            //       if (heroRoles[hero.localized_name].indexOf(d) == 0) {
+            //         return x(heroRoles[hero.localized_name].length + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 1) {
+            //           return x(heroRoles[hero.localized_name].length-1 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 2) {
+            //           return x(heroRoles[hero.localized_name].length-2 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 3) {
+            //           return x(heroRoles[hero.localized_name].length-3 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 4) {
+            //           return x(heroRoles[hero.localized_name].length-4 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 5) {
+            //           return x(heroRoles[hero.localized_name].length-5 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 6) {
+            //           return x(heroRoles[hero.localized_name].length-6 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 7) {
+            //           return x(heroRoles[hero.localized_name].length-7 + 10) *10 -3;
+            //       } else if (heroRoles[hero.localized_name].indexOf(d) == 8) {
+            //           return x(heroRoles[hero.localized_name].length-8 + 10) *10 -3;
             //       } else {
-            //           return x((heroRoles['hero.localized_name'].indexOf(d)) +10) *10 -3;
+            //           return x((heroRoles[hero.localized_name].indexOf(d)) +10) *10 -3;
             //       }
             //     })
             //     .attr("y", barHeight / 2)
