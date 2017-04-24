@@ -563,13 +563,8 @@
             });
          });
     });
-<<<<<<< HEAD
-
-
-
 }
 )();
-
 //TODO: Sandro's function
 
 // function sleepyMe() {
@@ -614,13 +609,3 @@
 //         f: WinRate(f_w,f_p),
 //         e: WinRate(e_w,e_p)};
 // }
-
-
-
-
-
-
-
-=======
-})();
->>>>>>> e8d972c58e953ecb079a53e70cdfd21a18d4da56
