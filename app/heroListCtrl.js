@@ -26,6 +26,7 @@
             title : ""
         }
 
+        $('#InfoOverlay').hide();
         $('#heroGraph').hide().empty();
 
         $scope.showHeroName = function(hero) {

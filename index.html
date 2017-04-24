@@ -28,6 +28,15 @@
             <canvas id="ViewPort"></canvas>
         </div>
         <div id="InfoOverlay">
+            <label id="comparisonContainer" for="heroComparison">
+            Hero Comparison:
+            <select id="heroComparison">
+            </select>
+            </label>
+            <br/>
+            <br/>
+            <label id="benchmarkcontainer" for="js-example-basic-single">
+            Benchmark Stat:
             <select id="js-example-basic-single">
               <option value="gold_per_min">GPM</option>
               <option value="hero_damage_per_min">Hero Damage per Min</option>
@@ -37,6 +46,7 @@
               <option value="tower_damage">Tower Damage</option>
               <option value="xp_per_min">XPM</option>
             </select>
+            </label>
             <svg id="heroGraph" width="800" height="250"></svg>
         </div>
         <!-- commenting out worthless div thats breaking spacing <div>
