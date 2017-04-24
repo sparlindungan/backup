@@ -451,9 +451,9 @@
 //     var e_p = thisHeroStats["5000_pick"];
 //
 //
-//     function WinRate(win, pick){
-//         return (win/pick) * 100;
-//     }
+//    function WinRate(win, pick){
+//        return Math.round(100 * ((win/pick) * 100))/100;
+//    }
 //
 //     return {a: WinRate(a_w,a_p),
 //         b: WinRate(b_w,b_p),
