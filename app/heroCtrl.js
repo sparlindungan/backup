@@ -294,7 +294,6 @@
                 $("#heroComparison").append(heroOption);
             });
 
-<<<<<<< HEAD
                 var heroStats; //get the stats for a specific hero
                 $.ajax({
                     url: 'https://api.opendota.com/api/heroStats',
@@ -320,9 +319,9 @@
 
 
 
-=======
+
             $("#heroComparison").select2();
->>>>>>> origin/master
+
 
             //show the hero graph in case it is hidden from the hero list view
             $('#InfoOverlay').show();
@@ -346,13 +345,13 @@
                 //Do Something to handle error
               }
             });
-<<<<<<< HEAD
+
             console.log(thisHeroStats.roles);
-=======
+
 
             console.log(thisHeroStats);
             console.log(_.get(thisHeroStats, '1000_pick'));
->>>>>>> origin/master
+
 
           //  hero role display
             var tip = d3.tip()

@@ -5,7 +5,6 @@
     width: 800px;
     margin-left: -400px;
     left: 50%;
-    color:white;
 }
 
 .line {
@@ -26,13 +25,12 @@
   fill: white;
 }
 
-#benchmarkcontainer {
+.select2-container {
     left: 80%;
     top: 65%;
     position: absolute;
 }
 
-<<<<<<< HEAD
 #heroRoles {
 	position: absolute;
     top: -650px;
@@ -43,16 +41,6 @@
 	position: absolute;
     top: -680px;
     left: -300px;
-=======
-#comparisonContainer {
-    position: absolute;
-    left: 10%;
-    top: 10%;
-}
-
-#heroComparison {
-    top:60%;
->>>>>>> origin/master
 }
 
 .chart rect {
