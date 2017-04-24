@@ -31,7 +31,17 @@
     position: absolute;
 }
 
+#heroRoles {
+	position: absolute;
+    top: -650px;
+    left: -300px;
+}
 
+#heroRolesTitle {
+	position: absolute;
+    top: -680px;
+    left: -300px;
+}
 
 .chart rect {
   fill: steelblue;

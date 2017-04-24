@@ -1,9 +1,9 @@
 (function(){
-    
+
     'use strict';
 
     var app = angular.module("heroViewer");
-    
+
     app.controller('heroList', function(
         $scope, $http, getResourcePath, cache, sparkle, background, renderer, animation
     ) {
@@ -27,6 +27,8 @@
         }
 
         $('#heroGraph').hide().empty();
+        $('#heroRoles').hide().empty();
+        $('#heroRolesTitle').hide();
 
         $scope.showHeroName = function(hero) {
             $scope.hoverHero.title = hero.title;
