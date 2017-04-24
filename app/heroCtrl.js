@@ -279,8 +279,22 @@
                 $scope.$digest();
 
             //InfoVis
+            var heroStats; //get the stats for a specific hero
+            $.ajax({
+                url: 'https://api.opendota.com/api/heroStats',
+                async: false,
+                dataType: 'json',
+                success: function(response) {
+                    heroStats = response;
+                },
+            });
 
+            heroStats.forEach(function(thisHero) {
+                var heroOption = new Option(_.get(thisHero, 'localized_name'), thisHero.name, false, false);
+                $("#heroComparison").append(heroOption);
+            });
 
+<<<<<<< HEAD
                 var heroStats; //get the stats for a specific hero
                 $.ajax({
                     url: 'https://api.opendota.com/api/heroStats',
@@ -306,9 +320,17 @@
 
 
 
+=======
+            $("#heroComparison").select2();
+>>>>>>> origin/master
 
+            //show the hero graph in case it is hidden from the hero list view
+            $('#InfoOverlay').show();
+            $('#heroGraph').show();
+            //find the hero stats for the specific hero we want to show
+            var thisHeroStats = _.find(heroStats, {'localized_name': $scope.overview.title});
 
-                //get the benchmarks for the hero that is currently being showed
+            //get the benchmarks for the hero that is currently being showed
             var heroBenchmarks;
             $.ajax({
               url: "https://api.opendota.com/api/benchmarks",
@@ -324,7 +346,13 @@
                 //Do Something to handle error
               }
             });
+<<<<<<< HEAD
             console.log(thisHeroStats.roles);
+=======
+
+            console.log(thisHeroStats);
+            console.log(_.get(thisHeroStats, '1000_pick'));
+>>>>>>> origin/master
 
           //  hero role display
             var tip = d3.tip()
@@ -516,9 +544,13 @@
 
             //update the vis upon select changing
             $("#js-example-basic-single").on("change", function (e) {
-                console.log(heroBenchmarks);
+                d3.select('path.comparisonline')
+                    .transition()
+                    .duration(250)
+                    .style('opacity', 0)
+                    .remove();
+
                 var visType = $("#js-example-basic-single").select2('data');
-                console.log(visType);
                 data = _.get(heroBenchmarks.result, visType[0].id);
                 y.domain([0, d3.max(data, function(d) { return d.value; })]);
                 var vis = d3.select("#heroGraph").transition();
@@ -540,8 +572,91 @@
                     .text(visType[0].text);
             });
 
+            $("#heroComparison").on("change", function (e) {
+                d3.select('path.comparisonline')
+                    .transition()
+                    .duration(250)
+                    .style('opacity', 0)
+                    .remove();
 
+                var clickedHero = $("#heroComparison").select2('data');
+                var thisHeroName = clickedHero[0].text;
 
+                console.log(heroStats);
+                var clickedHeroStats = _.find(heroStats, {'localized_name': thisHeroName});
+
+                var clickedHeroBench;
+                $.ajax({
+                  url: "https://api.opendota.com/api/benchmarks",
+                  type: "get", //send it through get method
+                  data: {
+                    hero_id: clickedHeroStats.id
+                  },
+                  async: false,
+                  success: function(response) {
+                    clickedHeroBench = response.result;
+                  },
+                  error: function(xhr) {
+                    //Do Something to handle error
+                  }
+                });
+
+                console.log(clickedHeroBench);
+                var visType = $("#js-example-basic-single").select2('data');
+                    data = _.get(clickedHeroBench, visType[0].id);
+
+                console.log(data);
+
+                var comparisonPath = g.append("path")
+                    .datum(data)
+                    .attr("fill", "none")
+                    .attr("stroke", "steelblue")
+                    .attr("stroke-linejoin", "round")
+                    .attr("stroke-linecap", "round")
+                    .attr("stroke-width", 1.5)
+                    .attr("class", "comparisonline")
+                    .attr("d", line);
+
+                var totalLength = comparisonPath.node().getTotalLength();
+
+                comparisonPath
+                  .attr("stroke-dasharray", totalLength + " " + totalLength)
+                  .attr("stroke-dashoffset", totalLength)
+                  .transition()
+                    .duration(2000)
+                    //.ease("quad")
+                    .attr("stroke-dashoffset", 0);
+
+                /*g.append("path")
+                    .datum(data)
+                    .attr("fill", "none")
+                    .attr("stroke", "steelblue")
+                    .attr("stroke-linejoin", "round")
+                    .attr("stroke-linecap", "round")
+                    .attr("stroke-width", 1.5)
+                    .attr("class", "line")
+                    .attr("d", line);*/
+
+                /*data = _.get(heroBenchmarks.result, visType[0].id);
+                y.domain([0, d3.max(data, function(d) { return d.value; })]);
+                var vis = d3.select("#heroGraph").transition();
+                vis.select(".line")   // change the line
+                    .duration(750)
+                    .attr("d", line(data));
+                vis.select(".x.axis") // change the x axis
+                    .duration(750)
+                    .call(d3.axisBottom(x))
+                vis.select(".y.axis") // change the y axis
+                    .duration(750)
+                    .call(d3.axisLeft(y));
+                yAxisText
+                    .transition()
+                    .duration(250)
+                    .style("opacity", 0)
+                    .transition().duration(500)
+                    .style("opacity", 1)
+                    .text(visType[0].text);*/
+            });
 
             });
          });

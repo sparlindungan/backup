@@ -26,6 +26,7 @@
             title : ""
         }
 
+        $('#InfoOverlay').hide();
         $('#heroGraph').hide().empty();
         $('#heroRoles').hide().empty();
         $('#heroRolesTitle').hide();
