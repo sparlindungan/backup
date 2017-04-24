@@ -15,6 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -24,6 +25,24 @@
                 <folding />
               </first_editor>
               <second_editor />
+=======
+      <file leaf-file-name="globeFeature.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/globeFeature.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="929">
+              <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="liquidGauge.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/liquidGauge.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding />
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
             </state>
           </provider>
         </entry>
@@ -31,23 +50,44 @@
       <file leaf-file-name="liquidFillGauge.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/liquidFillGauge.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2370">
               <caret line="158" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+=======
+            <state relative-caret-position="1230">
+              <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="liquid.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liquid.html">
+      <file leaf-file-name="hero.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partials/hero.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="158" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="heroCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/heroCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="270">
               <caret line="18" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
+=======
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="liquidInput.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/liquidInput.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,27 +102,60 @@
         <entry file="file://$PROJECT_DIR$/globeFeature.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
+<<<<<<< HEAD
               <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="world-countries.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/world-countries.json">
+=======
+              <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+=======
+      <file leaf-file-name="heroListCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/heroListCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sparkle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sparkle.js">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="45">
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="375">
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
+              <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+=======
+            <state relative-caret-position="-452">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="mmr.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mmr.json">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="30">
               <caret line="2" column="5591" lean-forward="false" selection-start-line="2" selection-start-column="5591" selection-end-line="2" selection-end-column="5591" />
+=======
+            <state relative-caret-position="1320">
+              <caret line="2" column="5591" lean-forward="true" selection-start-line="2" selection-start-column="5591" selection-end-line="2" selection-end-column="5591" />
+=======
+      <file leaf-file-name="liquidInput.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/liquidInput.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6090">
+              <caret line="17" column="54892" lean-forward="false" selection-start-line="17" selection-start-column="54892" selection-end-line="17" selection-end-column="54892" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
               <folding />
             </state>
           </provider>
@@ -90,14 +163,22 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test</find>
       <find>projec</find>
       <find>geo</find>
       <find>world</find>
       <find>]</find>
       <find>path</find>
+<<<<<<< HEAD
       <find>NewValue</find>
       <find>mmr</find>
       <find>gold</find>
@@ -107,6 +188,17 @@
       <find>data</find>
       <find>50</find>
       <find>id</find>
+=======
+      <find>coordiana</find>
+      <find>coordian</find>
+      <find>nates</find>
+      <find>id</find>
+      <find>common</find>
+      <find>feat</find>
+      <find>test</find>
+      <find>new</find>
+      <find>NewValue</find>
+>>>>>>> sandro
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,10 +215,17 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/state.json" />
         <option value="$PROJECT_DIR$/mmr.json" />
+        <option value="$PROJECT_DIR$/world-countries.json" />
         <option value="$PROJECT_DIR$/globeFeature.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/tools/dprocess.js" />
         <option value="$PROJECT_DIR$/liquidInput.json" />
         <option value="$PROJECT_DIR$/liquid.html" />
+=======
+        <option value="$PROJECT_DIR$/liquidFillGauge.js" />
+        <option value="$PROJECT_DIR$/liquidInput.json" />
+        <option value="$PROJECT_DIR$/liquidGauge.html" />
+>>>>>>> sandro
       </list>
     </option>
   </component>
@@ -142,7 +241,15 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
+<<<<<<< HEAD
     <option name="height" value="829" />
+=======
+<<<<<<< HEAD
+    <option name="height" value="831" />
+=======
+    <option name="height" value="829" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -159,7 +266,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,8 +290,15 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+=======
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,6 +307,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+<<<<<<< HEAD
+=======
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+>>>>>>> sandro
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
@@ -656,20 +783,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492535355266</updated>
+<<<<<<< HEAD
       <workItem from="1492535358475" duration="5047000" />
       <workItem from="1492686351521" duration="578000" />
       <workItem from="1492967014577" duration="144000" />
       <workItem from="1492967409906" duration="3691000" />
       <workItem from="1492978884544" duration="5080000" />
+<<<<<<< HEAD
       <workItem from="1492987632074" duration="148000" />
+=======
+=======
+      <workItem from="1492535358475" duration="6544000" />
+      <workItem from="1492616780506" duration="2193000" />
+      <workItem from="1492967262277" duration="83000" />
+      <workItem from="1492977413870" duration="1275000" />
+      <workItem from="1492985434810" duration="1083000" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="14688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="829" extended-state="6" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="14540000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="831" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="11178000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="829" extended-state="6" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -699,7 +851,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+>>>>>>> sandro
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,6 +869,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/package.json">
+=======
+    <entry file="file://$PROJECT_DIR$/globeFeature.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="18" lean-forward="true" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -720,6 +887,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/partials/hero.html">
+>>>>>>> sandro
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/globeFeature.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -740,11 +917,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+=======
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hero.todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/globeFeature.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -770,8 +990,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/world-countries.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="45">
           <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+=======
+        <state relative-caret-position="30">
+          <caret line="2" column="1070" lean-forward="false" selection-start-line="2" selection-start-column="1070" selection-end-line="2" selection-end-column="1070" />
+>>>>>>> sandro
           <folding />
         </state>
       </provider>
@@ -780,14 +1005,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/globeFeature.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+>>>>>>> sandro
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/world-countries.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/globeFeature.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="675">
           <caret line="45" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+=======
+        <state relative-caret-position="885">
+          <caret line="59" column="37" lean-forward="false" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="37" />
+>>>>>>> sandro
           <folding />
         </state>
       </provider>
@@ -795,21 +1056,31 @@
     <entry file="file://$PROJECT_DIR$/mmr.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+<<<<<<< HEAD
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+=======
+          <caret line="0" column="3849" lean-forward="false" selection-start-line="0" selection-start-column="3849" selection-end-line="0" selection-end-column="3849" />
+>>>>>>> sandro
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world-countries.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="45">
           <caret line="3" column="66" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/newS.json" />
     <entry file="file://$PROJECT_DIR$/state.json" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -867,15 +1138,94 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imgs/avatar.jpg">
+=======
+    <entry file="file://$PROJECT_DIR$/mmr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="73" lean-forward="true" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/world-countries.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2" column="1070" lean-forward="false" selection-start-line="2" selection-start-column="1070" selection-end-line="2" selection-end-column="1070" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes/chen/animations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes/chen/chen.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1230">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes/chen/materials.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-940">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes/doom/animations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes/doom/doom.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes/visage/animations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/rock/rock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/shaders/hero.essl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/rock/textures/badside_rocks001.png">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/imgs/wallpaper.jpg">
+=======
+    <entry file="file://$PROJECT_DIR$/assets/rock/textures/badside_rocks001_spec.png">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/blood_seeker/materials.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -886,12 +1236,18 @@
     <entry file="file://$PROJECT_DIR$/heroes/overview_cn.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2055">
+=======
+    <entry file="file://$PROJECT_DIR$/heroes/overview_cn.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+>>>>>>> sandro
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/heroes/overview_en.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="226">
           <caret line="283" column="110" lean-forward="false" selection-start-line="283" selection-start-column="109" selection-end-line="283" selection-end-column="110" />
         </state>
@@ -900,24 +1256,36 @@
     <entry file="file://$PROJECT_DIR$/heroes/witchdoctor/witchdoctor.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38280">
+=======
+        <state relative-caret-position="-4335">
+>>>>>>> sandro
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/witchdoctor/materials.json">
+=======
+    <entry file="file://$PROJECT_DIR$/js/SMDParser.js">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/app.js">
+=======
+    <entry file="file://$PROJECT_DIR$/partials/heroList.html">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -933,6 +1301,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/heroCtrl.js">
+=======
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="54" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heroes.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -940,15 +1320,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hero.todo">
+>>>>>>> sandro
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/data.tsv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/partials/hero.html">
+=======
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -956,13 +1356,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/partials/heroList.html">
+=======
+    <entry file="file://$PROJECT_DIR$/package.json">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/tools/dprocess.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -974,37 +1379,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="65" />
+<<<<<<< HEAD
+=======
+=======
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/partials/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
+          <folding />
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/dark_seer/dark_seer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37755">
           <caret line="2517" column="22" lean-forward="false" selection-start-line="2517" selection-start-column="17" selection-end-line="2517" selection-end-column="22" />
+<<<<<<< HEAD
+=======
+=======
+    <entry file="file://$PROJECT_DIR$/liquidFillGauge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+>>>>>>> sandro
+          <folding />
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/dark_seer/animations.json">
+=======
+    <entry file="file://$PROJECT_DIR$/partials/hero.html">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/enchantress/materials.json">
+=======
+    <entry file="file://$PROJECT_DIR$/app/heroCtrl.js">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/enchantress/enchantress.json">
+=======
+    <entry file="file://$PROJECT_DIR$/app/heroListCtrl.js">
+>>>>>>> sandro
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/heroes/blood_seeker/blood_seeker.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35175">
@@ -1046,25 +1496,67 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/liquid.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
+=======
+    <entry file="file://$PROJECT_DIR$/liquidFillGauge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="158" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/sparkle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-452">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> sandro
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/liquid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
+=======
     <entry file="file://$PROJECT_DIR$/liquidInput.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="54892" />
+        <state relative-caret-position="6090">
+          <caret line="17" column="54892" lean-forward="false" selection-start-line="17" selection-start-column="54892" selection-end-line="17" selection-end-column="54892" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/liquidInput.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="75">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="54892" />
+=======
+        <state relative-caret-position="90">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="54892" />
+=======
+    <entry file="file://$PROJECT_DIR$/globeFeature.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="929">
+          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/globeFeature.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
+<<<<<<< HEAD
           <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
           <folding />
         </state>
@@ -1074,6 +1566,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2370">
           <caret line="158" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+=======
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+=======
+    <entry file="file://$PROJECT_DIR$/liquidGauge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+>>>>>>> sandro
+>>>>>>> 079fcfe01d04d403c726a3c9d8e6656826df6f5c
           <folding />
         </state>
       </provider>
