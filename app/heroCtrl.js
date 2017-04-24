@@ -1,5 +1,5 @@
 (function(){
-    
+
     'use strict';
 
     var heroLoader = new qtek.loader.GLTF();
@@ -15,7 +15,7 @@
     });
     camera.position.set(40, 10, 40);
     camera.lookAt(new qtek.math.Vector3(0, 8, 0));
-    
+
     // Mouse control
     var control = new qtek.plugin.OrbitControl({
         target : camera,
@@ -310,7 +310,7 @@
             $.ajax({
               url: "https://api.opendota.com/api/benchmarks",
               type: "get", //send it through get method
-              data: { 
+              data: {
                 hero_id: thisHeroStats.id
               },
               async: false,
@@ -321,6 +321,158 @@
                 //Do Something to handle error
               }
             });
+
+
+            //hero role display
+            // var heroRoles = {};
+            // $.ajax({
+            //   url: 'https://api.opendota.com/api/heroStats',
+            //   async: false,
+            //   dataType: 'json',
+            //   success: function(response) {
+            //   heroStats = response;
+            //   for (var i = 0; i < response.length; i++) {
+            //     var hero = response[i];
+            //     heroRoles[hero.localized_name] = hero.roles;
+            //     }
+            //   }
+            // });
+            //
+            // var tip = d3.tip()
+            //   .attr('class', 'd3-tip')
+            //   .offset([50, 200])
+            //   .html(function(d) {
+            //     if (d == 'Carry') {
+            //       return 'Will become more useful later in the <br> game if they gain a significant gold <br> advantage.';
+            //     } else if (d == 'Disabler') {
+            //         return 'Has a guaranteed disable for <br> one or more of their spells.';
+            //     } else if (d == 'Initiator') {
+            //         return 'Good at starting a teamfight.';
+            //     } else if (d == 'Jungler') {
+            //         return 'Can farm effectively from neutral <br> creeps inside the jungle early <br> in the game.';
+            //     } else if (d == 'Support') {
+            //         return 'Can focus less on amassing gold and <br> items, and more on using their abilities to <br> gain an advantage for the team.';
+            //     } else if (d == 'Durable') {
+            //         return 'Has the ability to last longer <br> in teamfights.';
+            //     } else if (d == 'Nuker') {
+            //         return 'Can quickly kill enemy heroes <br> using high damage spells with <br> low cooldowns.';
+            //     } else if (d == 'Pusher') {
+            //         return 'Can quickly siege and destroy <br> towers and barracks at all points <br> of the game.';
+            //     } else if (d == 'Escape') {
+            //         return 'Has the ability to quickly avoid death.';
+            //     } else {
+            //       return 'null';
+            //     }
+            //
+            //   })
+            //
+            //   console.log(heroRoles);
+            //
+            //   //heroRoles['hero.localized_name'].reverse();
+            //   console.log(heroRoles['hero.localized_name']);
+            //
+            // var barOrder = {};
+            //   for (var i = 0; i <heroRoles['hero.localized_name'].length; i++) {
+            //
+            //   }
+            //
+            // var width = 420,
+            //     barHeight = 20;
+            //
+            // var x = d3.scale.linear()
+            //     .domain([0,420])
+            //     .range([0, width]);
+            //
+            // var chart = d3.select(".chart")
+            //     .attr("width", width)
+            //     .attr("height", barHeight *6);
+            //
+            // var bar = chart.selectAll("g")
+            //     .data(heroRoles['hero.localized_name'])
+            //   .enter().append("g")
+            //     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+            //
+            // chart.call(tip);
+            //
+            // bar.append("rect")
+            //       .style('fill', function(d) {
+            //         if (d == 'Carry') {
+            //           return '#330066';
+            //         } else if (d == 'Disabler') {
+            //             return '#999900';
+            //         } else if (d == 'Initiator') {
+            //             return '#008080';
+            //         } else if (d == 'Jungler') {
+            //             return '#006600';
+            //         } else if (d == 'Support') {
+            //             return '#002b80';
+            //         } else if (d == 'Durable') {
+            //             return '#800000';
+            //         } else if (d == 'Nuker') {
+            //             return '#cc0000';
+            //         } else if (d == 'Pusher') {
+            //             return '#b36b00';
+            //         } else if (d == 'Escape') {
+            //             return '	#696969';
+            //         } else {
+            //           return 'black';
+            //         }
+            //       })
+            //     .attr("width",  function(d) {
+            //       if (heroRoles['hero.localized_name'].indexOf(d) == 0) {
+            //         return x(heroRoles['hero.localized_name'].length + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 1) {
+            //           return x(heroRoles['hero.localized_name'].length-1 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 2) {
+            //           return x(heroRoles['hero.localized_name'].length-2 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 3) {
+            //           return x(heroRoles['hero.localized_name'].length-3 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 4) {
+            //           return x(heroRoles['hero.localized_name'].length-4 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 5) {
+            //           return x(heroRoles['hero.localized_name'].length-5 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 6) {
+            //           return x(heroRoles['hero.localized_name'].length-6 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 7) {
+            //           return x(heroRoles['hero.localized_name'].length-7 + 10) *10;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 8) {
+            //           return x(heroRoles['hero.localized_name'].length-8 + 10) *10;
+            //       } else {
+            //           return x((heroRoles['hero.localized_name'].indexOf(d)) +10) *10;
+            //       }
+            //
+            //     })
+            //     .attr("height", barHeight - 1)
+            //     .on("mouseover", tip.show)
+            //     .on("mouseout", tip.hide);
+            //
+            // bar.append("text")
+            //     .attr("x", function(d) {
+            //       if (heroRoles['hero.localized_name'].indexOf(d) == 0) {
+            //         return x(heroRoles['hero.localized_name'].length + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 1) {
+            //           return x(heroRoles['hero.localized_name'].length-1 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 2) {
+            //           return x(heroRoles['hero.localized_name'].length-2 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 3) {
+            //           return x(heroRoles['hero.localized_name'].length-3 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 4) {
+            //           return x(heroRoles['hero.localized_name'].length-4 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 5) {
+            //           return x(heroRoles['hero.localized_name'].length-5 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 6) {
+            //           return x(heroRoles['hero.localized_name'].length-6 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 7) {
+            //           return x(heroRoles['hero.localized_name'].length-7 + 10) *10 -3;
+            //       } else if (heroRoles['hero.localized_name'].indexOf(d) == 8) {
+            //           return x(heroRoles['hero.localized_name'].length-8 + 10) *10 -3;
+            //       } else {
+            //           return x((heroRoles['hero.localized_name'].indexOf(d)) +10) *10 -3;
+            //       }
+            //     })
+            //     .attr("y", barHeight / 2)
+            //     .attr("dy", ".35em")
+            //     .text(function(d) { return d; });
 
 
 
@@ -381,7 +533,7 @@
 
             //update the vis upon select changing
             $("#js-example-basic-single").on("change", function (e) {
-                console.log(heroBenchmarks); 
+                console.log(heroBenchmarks);
                 var visType = $("#js-example-basic-single").select2('data');
                 console.log(visType);
                 data = _.get(heroBenchmarks.result, visType[0].id);
@@ -411,6 +563,7 @@
             });
          });
     });
+<<<<<<< HEAD
 
 
 
@@ -468,3 +621,6 @@
 
 
 
+=======
+})();
+>>>>>>> e8d972c58e953ecb079a53e70cdfd21a18d4da56

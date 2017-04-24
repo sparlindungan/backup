@@ -23,10 +23,31 @@
 
 .axisWhite text{
   fill: white;
-}  
+}
 
 .select2-container {
     left: 80%;
     top: 65%;
     position: absolute;
+}
+
+
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.d3-tip {
+  line-height: 1;
+  font: 10px sans-serif;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
 }
