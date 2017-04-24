@@ -17,8 +17,9 @@
     <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
     <script type="text/javascript" src="node_modules/lodash/lodash.min.js"></script>
     <script type="text/javascript" src="node_modules/select2/dist/js/select2.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 </head>
-<body style="margin:0px"><!-- 
+<body style="margin:0px"><!--
     <a href="https://github.com/pissang/dota2hero" style="">
         <img style="position: absolute; top: 0; left: 0; border: 0;z-index:1000" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub">
     </a> -->
@@ -37,6 +38,9 @@
               <option value="xp_per_min">XPM</option>
             </select>
             <svg id="heroGraph" width="800" height="250"></svg>
+        </div>
+        <div>
+          <svg class="chart"></svg>
         </div>
         <div ng-view></div>
     </div>
