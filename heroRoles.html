@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.d3-tip {
+  line-height: 1;
+  font: 10px sans-serif;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+</style>
+<svg class="chart"></svg>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+
+var heroRoles = {};
+$.ajax({
+  url: 'https://api.opendota.com/api/heroStats',
+  async: false,
+  dataType: 'json',
+  success: function(response) {
+  heroStats = response;
+  for (var i = 0; i < response.length; i++) {
+    var hero = response[i];
+    heroRoles[hero.localized_name] = hero.roles;
+    }
+  }
+});
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([50, 200])
+  .html(function(d) {
+    if (d == 'Carry') {
+      return 'Will become more useful later in the <br> game if they gain a significant gold <br> advantage.';
+    } else if (d == 'Disabler') {
+        return 'Has a guaranteed disable for <br> one or more of their spells.';
+    } else if (d == 'Initiator') {
+        return 'Good at starting a teamfight.';
+    } else if (d == 'Jungler') {
+        return 'Can farm effectively from neutral <br> creeps inside the jungle early <br> in the game.';
+    } else if (d == 'Support') {
+        return 'Can focus less on amassing gold and <br> items, and more on using their abilities to <br> gain an advantage for the team.';
+    } else if (d == 'Durable') {
+        return 'Has the ability to last longer <br> in teamfights.';
+    } else if (d == 'Nuker') {
+        return 'Can quickly kill enemy heroes <br> using high damage spells with <br> low cooldowns.';
+    } else if (d == 'Pusher') {
+        return 'Can quickly siege and destroy <br> towers and barracks at all points <br> of the game.';
+    } else if (d == 'Escape') {
+        return 'Has the ability to quickly avoid death.';
+    } else {
+      return 'null';
+    }
+
+  })
+
+  console.log(heroRoles);
+
+  //heroRoles['Enchantress'].reverse();
+  console.log(heroRoles['Enchantress']);
+
+var barOrder = {};
+  for (var i = 0; i <heroRoles['Enchantress'].length; i++) {
+
+  }
+
+var width = 420,
+    barHeight = 20;
+
+var x = d3.scale.linear()
+    .domain([0,420])
+    .range([0, width]);
+
+var chart = d3.select(".chart")
+    .attr("width", width)
+    .attr("height", barHeight *6);
+
+var bar = chart.selectAll("g")
+    .data(heroRoles['Enchantress'])
+  .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+chart.call(tip);
+
+bar.append("rect")
+      .style('fill', function(d) {
+        if (d == 'Carry') {
+          return '#330066';
+        } else if (d == 'Disabler') {
+            return '#999900';
+        } else if (d == 'Initiator') {
+            return '#008080';
+        } else if (d == 'Jungler') {
+            return '#006600';
+        } else if (d == 'Support') {
+            return '#002b80';
+        } else if (d == 'Durable') {
+            return '#800000';
+        } else if (d == 'Nuker') {
+            return '#cc0000';
+        } else if (d == 'Pusher') {
+            return '#b36b00';
+        } else if (d == 'Escape') {
+            return '	#696969';
+        } else {
+          return 'black';
+        }
+      })
+    .attr("width",  function(d) {
+      if (heroRoles['Enchantress'].indexOf(d) == 0) {
+        return x(heroRoles['Enchantress'].length + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 1) {
+          return x(heroRoles['Enchantress'].length-1 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 2) {
+          return x(heroRoles['Enchantress'].length-2 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 3) {
+          return x(heroRoles['Enchantress'].length-3 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 4) {
+          return x(heroRoles['Enchantress'].length-4 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 5) {
+          return x(heroRoles['Enchantress'].length-5 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 6) {
+          return x(heroRoles['Enchantress'].length-6 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 7) {
+          return x(heroRoles['Enchantress'].length-7 + 10) *10;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 8) {
+          return x(heroRoles['Enchantress'].length-8 + 10) *10;
+      } else {
+          return x((heroRoles['Enchantress'].indexOf(d)) +10) *10;
+      }
+
+    })
+    .attr("height", barHeight - 1)
+    .on("mouseover", tip.show)
+    .on("mouseout", tip.hide);
+
+bar.append("text")
+    .attr("x", function(d) {
+      if (heroRoles['Enchantress'].indexOf(d) == 0) {
+        return x(heroRoles['Enchantress'].length + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 1) {
+          return x(heroRoles['Enchantress'].length-1 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 2) {
+          return x(heroRoles['Enchantress'].length-2 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 3) {
+          return x(heroRoles['Enchantress'].length-3 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 4) {
+          return x(heroRoles['Enchantress'].length-4 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 5) {
+          return x(heroRoles['Enchantress'].length-5 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 6) {
+          return x(heroRoles['Enchantress'].length-6 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 7) {
+          return x(heroRoles['Enchantress'].length-7 + 10) *10 -3;
+      } else if (heroRoles['Enchantress'].indexOf(d) == 8) {
+          return x(heroRoles['Enchantress'].length-8 + 10) *10 -3;
+      } else {
+          return x((heroRoles['Enchantress'].indexOf(d)) +10) *10 -3;
+      }
+
+      //return x((heroRoles['Enchantress'].indexOf(d)) +10) *10 -3;
+
+    })
+    .attr("y", barHeight / 2)
+    .attr("dy", ".35em")
+    .text(function(d) { return d; });
+
+
+
+
+    // function handleMouseOver(d, i) {  // Add interactivity
+    //
+    //         // Use D3 to select element, change color and size
+    //         d3.select(this).attr({
+    //           fill: "orange",
+    //         });
+    //
+    //         // Specify where to put label of text
+    //         chart.append("text").attr({
+    //            id: "t" + d.x + "-" + d.y + "-" + i,  // Create an id for text so we can select it later for removing on mouseout
+    //             x: function() { return 40; },
+    //             y: function() { return 15; }
+    //         })
+    //         .text("hello");
+    //       }
+
+
+</script>
