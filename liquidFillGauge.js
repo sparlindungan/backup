@@ -186,7 +186,7 @@ function loadLiquidFillGauge(elementId,value,config){
                         animateWave(config.waveAnimateTime);
                     }
                 }
-                );
+            );
             waveGroup.transition().duration(config.waveRiseTime).attr('transform',
                 'translate('+waveGroupXPosition+','+newHeight+')')
         }
