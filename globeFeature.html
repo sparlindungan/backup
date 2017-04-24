@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="style/pace.css" />
+<link type="text/less" rel="stylesheet" href="style/app.less" />
+<link type="text/css" rel="stylesheet" href="lib/semantic/css/semantic.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="style/visStyle.css" />
 <style>
 
     .title {
@@ -15,9 +20,27 @@
         pointer-events: none;
     }
 
+    body {
+        position: absolute;
+        left: 33%;
+        background-color: #6d0019;
+        color: white;
+    }
+
+    .ui.circular.icon {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+
 </style>
 <body>
 <div .title>Dota2 Global MMR</div>
+<a href="../">
+    <div class="ui circular icon button blue" id="Globe">
+        <i class="icon home"></i>
+    </div>
+</a>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script>
@@ -81,6 +104,7 @@
     svg.append("text")
         .attr("class","legendText")
         .attr("text-anchor", "middle")
+        .style('fill', 'white')
         .attr("font-size", "14px")
         .attr("x", 500/2)
         .attr("y",500 + 15)
@@ -90,6 +114,7 @@
         .attr("class","legendText")
         .attr("text-anchor", "start")
         .attr("font-size", "14px")
+        .style('fill', 'white')
         .attr("x", 0)
         .attr("y",500 + 65)
         .text("2584");
@@ -100,6 +125,7 @@
         .attr("font-size", "14px")
         .attr("x", 500)
         .attr("y",500 + 65)
+        .style('fill', 'white')
         .text("3436");
 
     var path = d3.geo.path()
