@@ -531,7 +531,7 @@
                 .attr('text-anchor', 'end')
                 .text('GPM');
 
-            g.append("path")
+            var mainLine = g.append("path")
                 .datum(data)
                 .attr("fill", "none")
                 .attr("stroke", "steelblue")
@@ -540,6 +540,16 @@
                 .attr("stroke-width", 1.5)
                 .attr("class", "line")
                 .attr("d", line);
+
+            var totalLength = mainLine.node().getTotalLength();
+
+                mainLine
+                  .attr("stroke-dasharray", totalLength + " " + totalLength)
+                  .attr("stroke-dashoffset", totalLength)
+                  .transition()
+                    .duration(2000)
+                    //.ease("quad")
+                    .attr("stroke-dashoffset", 0);
 
             //update the vis upon select changing
             $("#js-example-basic-single").on("change", function (e) {
@@ -581,7 +591,6 @@
                 var clickedHero = $("#heroComparison").select2('data');
                 var thisHeroName = clickedHero[0].text;
 
-                console.log(heroStats);
                 var clickedHeroStats = _.find(heroStats, {'localized_name': thisHeroName});
 
                 var clickedHeroBench;
@@ -600,16 +609,13 @@
                   }
                 });
 
-                console.log(clickedHeroBench);
                 var visType = $("#js-example-basic-single").select2('data');
                     data = _.get(clickedHeroBench, visType[0].id);
-
-                console.log(data);
 
                 var comparisonPath = g.append("path")
                     .datum(data)
                     .attr("fill", "none")
-                    .attr("stroke", "steelblue")
+                    .attr("stroke", "red")
                     .attr("stroke-linejoin", "round")
                     .attr("stroke-linecap", "round")
                     .attr("stroke-width", 1.5)
