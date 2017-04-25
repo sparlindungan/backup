@@ -26,6 +26,10 @@
   fill: white;
 }
 
+#rolesOverlay {
+  position: absolute;
+}
+
 #benchmarkcontainer {
       left: 80%;
       top: 64%;
