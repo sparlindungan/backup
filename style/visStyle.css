@@ -28,6 +28,8 @@
 
 #rolesOverlay {
   position: absolute;
+  left: 250px;
+  top: 50px;
 }
 
 #benchmarkcontainer {
@@ -46,16 +48,9 @@
      top:60%;
  }
 
-#heroRoles {
-	position: absolute;
-    top: -600px;
-    left: -300px;
-}
-
 #heroRolesTitle {
 	position: absolute;
-    top: -630px;
-    left: -300px;
+  top: -20px;
 }
 
 .chart rect {
