@@ -2,6 +2,8 @@
 
     'use strict';
 
+    //THE MAJORITY OF THE BELOW CODE UP UNTIL ABOUT LINE 280 IS A LIBRARY
+
     var heroLoader = new qtek.loader.GLTF();
 
     var app = angular.module("heroViewer");
@@ -279,6 +281,8 @@
                 $scope.$digest();
 
             //InfoVis
+            //EVERYTHING BELOW HERE IS OUR CODE
+
             var heroStats; //get the stats for a specific hero
             $.ajax({
                 url: 'https://api.opendota.com/api/heroStats',
@@ -582,7 +586,7 @@
             });
 
             $("#heroComparison").on("change", function (e) {
-                d3.select('path.comparisonline')
+                d3.select('path.comparisonline') //Fade out the old comparison line
                     .transition()
                     .duration(250)
                     .style('opacity', 0)
@@ -595,7 +599,7 @@
 
                 var clickedHeroBench;
                 $.ajax({
-                  url: "https://api.opendota.com/api/benchmarks",
+                  url: "https://api.opendota.com/api/benchmarks", //Call the hero bench for the comparison hero
                   type: "get", //send it through get method
                   data: {
                     hero_id: clickedHeroStats.id
@@ -612,7 +616,7 @@
                 var visType = $("#js-example-basic-single").select2('data');
                     data = _.get(clickedHeroBench, visType[0].id);
 
-                var comparisonPath = g.append("path")
+                var comparisonPath = g.append("path") //Create the comparison Line
                     .datum(data)
                     .attr("fill", "none")
                     .attr("stroke", "red")
@@ -622,45 +626,14 @@
                     .attr("class", "comparisonline")
                     .attr("d", line);
 
-                var totalLength = comparisonPath.node().getTotalLength();
+                var totalLength = comparisonPath.node().getTotalLength(); //Animate the growing of the comparison line
 
                 comparisonPath
                   .attr("stroke-dasharray", totalLength + " " + totalLength)
                   .attr("stroke-dashoffset", totalLength)
                   .transition()
                     .duration(2000)
-                    //.ease("quad")
                     .attr("stroke-dashoffset", 0);
-
-                /*g.append("path")
-                    .datum(data)
-                    .attr("fill", "none")
-                    .attr("stroke", "steelblue")
-                    .attr("stroke-linejoin", "round")
-                    .attr("stroke-linecap", "round")
-                    .attr("stroke-width", 1.5)
-                    .attr("class", "line")
-                    .attr("d", line);*/
-
-                /*data = _.get(heroBenchmarks.result, visType[0].id);
-                y.domain([0, d3.max(data, function(d) { return d.value; })]);
-                var vis = d3.select("#heroGraph").transition();
-                vis.select(".line")   // change the line
-                    .duration(750)
-                    .attr("d", line(data));
-                vis.select(".x.axis") // change the x axis
-                    .duration(750)
-                    .call(d3.axisBottom(x))
-                vis.select(".y.axis") // change the y axis
-                    .duration(750)
-                    .call(d3.axisLeft(y));
-                yAxisText
-                    .transition()
-                    .duration(250)
-                    .style("opacity", 0)
-                    .transition().duration(500)
-                    .style("opacity", 1)
-                    .text(visType[0].text);*/
             });
 
             });

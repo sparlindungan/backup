@@ -2,6 +2,10 @@
 
     'use strict';
 
+    //This controller serves to navigate from the hero control page
+    //This is part of a library
+    //However we have features within it to hide and show as well as clear out our visualizations in between navigation
+
     var app = angular.module("heroViewer");
 
     app.controller('heroList', function(

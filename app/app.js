@@ -2,6 +2,9 @@
     
     'use strict';
 
+    //App controller to serve as a router between the two main views
+    //Part of the hero viewer lib
+
     var app = angular.module("heroViewer");
     
     function getResourcePath(path) {
