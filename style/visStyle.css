@@ -5,6 +5,7 @@
     width: 800px;
     margin-left: -400px;
     left: 50%;
+    color: white;
 }
 
 .line {
@@ -25,11 +26,21 @@
   fill: white;
 }
 
-.select2-container {
-    left: 80%;
-    top: 65%;
-    position: absolute;
-}
+#benchmarkcontainer {
+      left: 80%;
+      top: 64%;
+      position: absolute;
+  }
+  
+ #comparisonContainer {
+     position: absolute;
+     left: 10%;
+     top: 10%;
+ }
+  
+ #heroComparison {
+     top:60%;
+ }
 
 #heroRoles {
 	position: absolute;
